@@ -1,7 +1,6 @@
 # Library for Graph Visualisation
 ## Requirements: 
-- D3(?)
-- JQuery(?)
+- Vanilla js
 
 ## Functionalities
 - Graph Drawing: -> Start here
