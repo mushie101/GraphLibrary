@@ -1,0 +1,62 @@
+<html>
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
+    </head>
+    <body>
+
+        <p id="demo" style="position:relative;">DEMO</p>
+            <svg id="edge">
+                <circle id="rc" cx="50" cy="50" r="20" fill="red" style="position:relative ; z-index:100;"/>
+                <circle id="bc" cx="100" cy="100" r="20" fill="blue" style="z-index:100;"/>
+                <circle id="vc" cx="120" cy="50" r="20" fill="black" style="z-index:100;"/>
+            </svg>
+           <script>
+
+               function createEdge(circle1, circle2, target) {
+                    var circle1 = $(circle1);   
+                    var circle2 = $(circle2);
+                    var fun = $(target);
+                    var circle1Pos = circle1.position();
+                    var circle2Pos = circle2.position();
+                    // var radius = circle1.getAttribute("r");
+                    var radius = 20;
+                    radius = radius/10;
+                    radius = radius-1;
+                    var line = document.createElement('line');
+                    console.log(line);
+                    line.style.position='absolute'
+                    line.style.stroke='black'
+                    line.style.strokeWidth='2px'                   
+                    line.setAttribute('x1', circle1Pos.left+10*radius+2)
+                    line.setAttribute('y1', circle1Pos.top-32+10*radius)
+                    line.setAttribute('x2', circle2Pos.left+10*radius+2)
+                    line.setAttribute('y2', circle2Pos.top-32+10*radius);               
+                    fun.append(line);
+                
+               };
+
+            //    function createEdge(rc,bc){
+            //         var line1 = $("#line"+x.toString());   
+            //         div1 = $(rc);   
+            //         div2 = $(bc);
+            //         r = document.getElementById("rc").getAttribute("r");
+            //         r = r/10;
+            //         r = r-1;
+            //         var pos1 = div1.position();
+            //         var pos2 = div2.position();
+            //         line1
+            //             .attr('x1', pos1.left+10*r+2)
+            //             .attr('y1', pos1.top-32+10*r)
+            //             .attr('x2', pos2.left+10*r+2)
+            //             .attr('y2', pos2.top-32+10*r);
+            //         //document.getElementById("edge").innerHTML +='<line id="line'+x+'" style="position:absolute ; stroke-width:1.5;stroke:black; position:fixed ;z-index:-1;"/>';
+            //         console.log(pos1.left,pos1.top,pos2.left,pos2.top);
+            //         return line1
+            //     };
+
+                console.log(createEdge("#rc","#vc","#edge"));
+                console.log(createEdge("#rc","#bc","#edge"));
+           </script>
+    </body>
+</html>
+
