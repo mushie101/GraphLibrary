@@ -7,7 +7,7 @@
     - Should be able to draw graph acc to user specifications
         - Come up with what all specifications, implement a basic adjacecny matrix based inplementation : Done (Shubhangi)
     - Should be able to draw undirected and directed graphs
-        - User specifications, come up with a way to draw arrows and shiz: Mustafa
+        - User specifications, come up with a way to draw arrows: Mustafa
     - Should have straight edges in the graphs: In progress (Shashank)
     - Should have circular nodes: In progress (Mustafa)
     - Should follow VLEAD's colour standards
