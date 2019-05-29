@@ -30,3 +30,11 @@
 - Graph Generation
     - Should be able to generate a random graph of a given type (Tree, DAG, No restrictions):Mustafa
     - Should allow user to specify number of nodes: Matrix part done (Shubhangi)
+
+- Tree Drawing
+    - Should be able to add node by node in a binary tree
+    - Have a maximum of 31 nodes (5 layers with the same height, different widths)
+
+- Tree Generation
+    - Should be able to generate a random tree out of an array of a given size
+    
