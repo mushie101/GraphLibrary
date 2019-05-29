@@ -9,13 +9,13 @@ ___
 
 ## Steps to use Graph Visualisation:
 ___
-- import drawGraph.js and edge.js in the head of your HTML file as follows:
-`<script src="Your/Path/GraphLibrary/drawGraph.js"></script>`
-`<script src="Your/Path/GraphLibrary/edge.js"></script>`
+- import drawGraph.js and edge.js in the head of your HTML file as follows:  
+`<script src="Your/Path/GraphLibrary/drawGraph.js"></script>`  
+`<script src="Your/Path/GraphLibrary/edge.js"></script>`  
 
 - Call functions in the body of your HTML file as follows:
-`    <script>`
-`       drawGraphNodes();`
-`       makeCanvas();`
-`       drawUnDirEdge();`
-`    </script> `
+`    <script>`  
+`       drawGraphNodes();`  
+`       makeCanvas();`  
+`       drawUnDirEdge();`  
+`    </script> `  
