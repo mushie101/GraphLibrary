@@ -14,8 +14,8 @@ ___
 `<script src="Your/Path/GraphLibrary/edge.js"></script>`  
 
 - Call functions in the body of your HTML file as follows:  
-'<script>'  
-&nbsp;'drawGraphNodes();'    
-&nbsp;'makeCanvas();'    
-&nbsp;'drawUnDirEdge();'    
-'</script>'  
+<script>  
+&nbsp;drawGraphNodes();      
+&nbsp;makeCanvas();    
+&nbsp;drawUnDirEdge();      
+</script>  
