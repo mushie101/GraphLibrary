@@ -1,3 +1,9 @@
+makeGraph = (id) => {
+    console.log(id)
+    let graph = document.getElementById(`${id}`)
+    graph.setAttribute("visibility", "visible")
+    return
+}
 drawGraphNodes = () => {
     let container = document.createElement('div')
     document.body.appendChild(container)
@@ -19,16 +25,21 @@ drawGraphNodes = () => {
             container.appendChild(div);
             div.style.width = `75px`
             div.style.height = `75px`
-            div.id = `${gridNumber}`;
+            div.id = `div`;
             div.style.position= "absolute"
             div.style.top = `${indexY*75}px`
             div.style.left = `${indexX*75}px`
             div.style.alignContent = `center`
             div.style.border = "thin dotted rgb(220,220,220)"
             div.innerHTML = `<svg width=75 height=75>
-                                <circle cx="50%" cy="50%" visibility="hidden" fill="#aaffaa" id="svg_1" r="22.5%" stroke="#000000" stroke-width="3%"/>
+                                <circle cx="50%" cy="50%" visibility="hidden" fill="#aaffaa" id=${gridNumber} r="22.5%" stroke="#000000" stroke-width="3%"/>
                                 <text x=75% y=90%>${gridNumber++}</text>
                             </svg>`
+            console.log(gridNumber-1)
         }
     }
+    document.body.innerHTML += `<form name="form" onsubmit="makeGraph(form.node.value); return false">Select Node:<br>
+                                    <input type="text" name="node">
+                                    <input type="submit">
+                                </form>`
 }
