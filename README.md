@@ -15,7 +15,7 @@ ___
 
 - Call functions in the body of your HTML file as follows:  
 `<script>`  
-&nbsp; `drawGraphNodes();`      
-&nbsp; `makeCanvas();`    
-&nbsp; `drawUnDirEdge();`      
+&nbsp; &nbsp; `drawGraphNodes();`      
+&nbsp; &nbsp; `makeCanvas();`    
+&nbsp; &nbsp; `drawUnDirEdge();`      
 `</script>`  
