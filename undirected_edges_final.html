@@ -1,5 +1,6 @@
 <html>
     <head>
+            <meta charset="utf-8"/>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
     </head>
     <body>
@@ -22,15 +23,15 @@
                     var radius = 20;
                     radius = radius/10;
                     radius = radius-1;
-                    var line = document.createElement('line');
-                    console.log(line);
+                    var line = document.createElementNS('http://www.w3.org/2000/svg','line');
                     line.style.position='absolute'
                     line.style.stroke='black'
-                    line.style.strokeWidth='2px'                   
+                    line.style.strokeWidth='0.2vw'                   
                     line.setAttribute('x1', circle1Pos.left+10*radius+2)
                     line.setAttribute('y1', circle1Pos.top-32+10*radius)
                     line.setAttribute('x2', circle2Pos.left+10*radius+2)
                     line.setAttribute('y2', circle2Pos.top-32+10*radius);               
+                    console.log(line);
                     fun.append(line);
                 
                };
