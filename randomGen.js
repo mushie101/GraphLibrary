@@ -1,13 +1,13 @@
 /* Takes as input number of vertices and gridSize.
 Intialises empty adjacency matrix of correct size (using adjMat function), and randomises coordinates of vertices.*/
-randomGeneratorNode = (num, gridSize) => {
+randomGeneratorNode = (num, gridSizeX, gridSizeY) => {
 let coordX = new Array(num).fill(-1)
 let coordY = new Array(num).fill(-1)
 let mat = adjMat(num)
 
 for (var i = 0 ; i < num ; ){
-    coordX[i] = Math.floor((Math.random() * gridSize) + 1); 
-    coordY[i] = Math.floor((Math.random() * gridSize) + 1); 
+    coordX[i] = Math.floor((Math.random() * gridSizeX) + 1); 
+    coordY[i] = Math.floor((Math.random() * gridSizeY) + 1); 
     let chk=0
     for (var j = 0; j < i; j++){
         if (coordX[i]!=coordX[j] && coordY[i]!=coordY[j]){
