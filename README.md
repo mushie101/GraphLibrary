@@ -1,5 +1,5 @@
 # GraphLibrary
-___
+
 ## Steps to contribute:
 - Every time you work on a new funtion make a new file.
 - Use camel casing and write readable code.
@@ -8,7 +8,7 @@ ___
 - Happy coding! :D
 
 ## Steps to use Graph Visualisation:
-___
+
 - import drawGraph.js and edge.js in the head of your HTML file as follows:  
 `<script src="Your/Path/GraphLibrary/drawGraph.js"></script>`  
 `<script src="Your/Path/GraphLibrary/edge.js"></script>`  
