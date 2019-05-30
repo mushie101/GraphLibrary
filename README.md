@@ -1,5 +1,9 @@
 # GraphLibrary
 
+## Authored By :-
+- Mustafa Siddiqui (https://github.com/mushie101)
+- Shubhangi Dutta (https://github.com/celinarose)
+
 ## Steps to contribute:
 - Every time you work on a new funtion make a new file.
 - Use camel casing and write readable code.
