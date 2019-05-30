@@ -1,3 +1,5 @@
+/* Takes as input number of vertices and gridSize.
+Intialises empty adjacency matrix of correct size (using adjMat function), and randomises coordinates of vertices.*/
 randomGeneratorNode = (num, gridSize) => {
 let coordX = new Array(num).fill(-1)
 let coordY = new Array(num).fill(-1)
@@ -17,12 +19,12 @@ for (var i = 0 ; i < num ; ){
         //drawNode(coordX[i], coordY[i])
         }
     }
-return mat
 }
 
 
+/* Takes as input number of vertices, existing matrix, and boolean for directed/undirected graph.
+Randomises number of edges, source vertex and target vertex, and adds edges (using addEdgeMat function). */
 randomGeneratorEdge = (num, mat, isDirected) => {
-
 if (isDirected==1){
     numEdges = Math.floor((Math.random() * (num*(num-1))) + 1);
     }
@@ -37,5 +39,4 @@ for (let i = 0; i <= numEdges; ){
         i++;
         }
     }
-return mat
 }
