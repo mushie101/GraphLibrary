@@ -17,7 +17,7 @@
 
 - import drawGraph.js and edge.js in the head of your HTML file as follows:  
 `<script src="Your/Path/GraphLibrary/drawGraph.js"></script>`  
-`<script src="Your/Path/GraphLibrary/edge.js"></script>`  
+`<script src="Your/Path/GraphLibrary/graphEdge.js"></script>`  
 
 - Call functions in the body of your HTML file as follows:  
 `<script>`  
