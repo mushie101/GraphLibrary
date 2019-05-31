@@ -20,11 +20,15 @@ drawTreeNodes = () => {
             childDiv.style.position = "absolute"
             childDiv.style.top = `${layerNumber*heightOfLayer}px`
             childDiv.style.left = `${horizontal*widthOfLayer}px`
-            let svgBlock = document.createElement("svg")
+            let svgBlock = document.createElementNS("http://www.w3.org/2000/svg", "svg")
             svgBlock.setAttribute("height", heightOfLayer)
             svgBlock.setAttribute("width", heightOfLayer)
+            svgBlock.style.position = "relative"
+            svgBlock.style.left = "50%"
+            svgBlock.style.webkitTransform = "translateX(-50%)"
+            svgBlock.style.transform = "translateX(-50%);"
             childDiv.appendChild(svgBlock)
-            let node = document.createElement("circle")
+            let node = document.createElementNS("http://www.w3.org/2000/svg", "circle")
             node.setAttribute("cx", "50%")
             node.setAttribute("cy", "50%")
             // node.setAttribute("visibility", "show")
