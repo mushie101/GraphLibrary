@@ -1,5 +1,7 @@
 # GraphLibrary
 
+- Code is yet to be cleaned up and optimised, this is a Beta
+
 ## Authored By :-
 - Mustafa Siddiqui (https://github.com/mushie101)
 - Shubhangi Dutta (https://github.com/celinarose)
