@@ -2,6 +2,8 @@
 <head>
     <script src = "./create_Graph.js"></script>
     <script src = "./is_DAG.js"></script>
+    <script src = "./generateDAG.js"></script>
+
     <script>
         function check(){
             var g = new Graph(4);
@@ -14,7 +16,9 @@
             g.addEdge(2, 3); 
             console.log(isDAG(g));
         }
-        check();
+//        check();
+        var grap = generateDAG();
+        console.log(isDAG(grap));
     </script>
 </head>    
 
