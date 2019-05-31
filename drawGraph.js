@@ -1,5 +1,4 @@
 makeGraph = (id) => {
-    console.log(id)
     let graph = document.getElementById(`${id}`)
     graph.setAttribute("visibility", "visible")     //If visibility == visible, alert("Can't reselect node")
     return

@@ -13,16 +13,15 @@ drawDirEdge = (node1, node2) => {
     let xOffset = canRect.left-bodyRect.left
     let headlen = 10;
     let angle = Math.atan2((circle2Top-yOffset+radius-radius)-(circle1Top-yOffset+radius),(circle2Left-xOffset+radius)-(circle1Left-xOffset+radius));
-    console.log(xOffset)
-    console.log(yOffset)
+    
+    
     document.body.style.padding = "0"
     document.body.style.margin = "0"
-    console.log(radius)
-    let ctx = can.getContext("2d");
+        let ctx = can.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(circle1Left-xOffset+radius, circle1Top-yOffset+radius);
     ctx.lineTo(circle2Left-xOffset+radius, circle2Top-yOffset+radius);
-    ctx.lineWidth = 2
+    ctx.lineWidth = 1.5
     ctx.stroke()
     ctx.moveTo(circle2Left-xOffset+radius, circle2Top-yOffset+radius);
     ctx.lineTo(circle2Left-xOffset+radius-headlen*Math.cos(angle-Math.PI/7),circle2Top-yOffset+radius-headlen*Math.sin(angle-Math.PI/7));
@@ -30,7 +29,7 @@ drawDirEdge = (node1, node2) => {
     ctx.lineTo(circle2Left-xOffset+radius, circle2Top-yOffset+radius);
     ctx.lineTo(circle2Left-xOffset+radius-headlen*Math.cos(angle-Math.PI/7),circle2Top-yOffset+radius-headlen*Math.sin(angle-Math.PI/7));
     ctx.strokeStyle = "grey";
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 1.5;
     ctx.stroke();
     ctx.fillStyle = "grey";
     ctx.fill();
@@ -40,24 +39,23 @@ drawUnDirEdge = (node1, node2) => {
     let bodyRect = document.body.getBoundingClientRect(), canRect = can.getBoundingClientRect()
     let yOffset = canRect.top-bodyRect.top
     let xOffset = canRect.left-bodyRect.left
-    console.log(xOffset)
-    console.log(yOffset)
+    
+    
     document.body.style.padding = "0"
     document.body.style.margin = "0"
     let Node1 = document.getElementById(`${node1}`)
     let Node2 = document.getElementById(`${node2}`)
-    console.log(Node1, Node2);
     let circle1Left = Node1.getBoundingClientRect().left
     let circle1Top = Node1.getBoundingClientRect().top
     let circle2Left = Node2.getBoundingClientRect().left
     let circle2Top = Node2.getBoundingClientRect().top
     let radius = (Node1.getBoundingClientRect().right - Node1.getBoundingClientRect().left) / 2
     radius = parseFloat(radius)
-    console.log(radius)
     let ctx = can.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(circle1Left-xOffset+radius, circle1Top-yOffset+radius);
     ctx.lineTo(circle2Left-xOffset+radius, circle2Top-yOffset+radius);
+    ctx.strokeStyle = "black"
     ctx.lineWidth = 1.5
     ctx.stroke()
 }
@@ -79,5 +77,4 @@ makeCanvas = () => {
     <input type="submit">
     </form>`
 }
-
 
