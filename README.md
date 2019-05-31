@@ -23,3 +23,19 @@
 &nbsp; &nbsp; &nbsp; &nbsp; `makeCanvas();`    
 &nbsp; &nbsp; &nbsp; &nbsp; `drawUnDirEdge();`      
 `</script>`  
+
+## Steps to use Tree Visualisation:  
+
+- Coming soon  
+
+## Inbuilt Algorithms:  
+
+- Coming soon  
+
+## Random creation of Directed Graphs (and also DAGs):
+
+- Coming soon  
+
+## Random creation of Undirected Graphs:
+
+- Coming soon
