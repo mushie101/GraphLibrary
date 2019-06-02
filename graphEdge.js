@@ -13,8 +13,6 @@ drawDirEdge = (node1, node2) => {
     let xOffset = canRect.left-bodyRect.left
     let headlen = 10;
     let angle = Math.atan2((circle2Top-yOffset+radius-radius)-(circle1Top-yOffset+radius),(circle2Left-xOffset+radius)-(circle1Left-xOffset+radius));
-    
-    
     document.body.style.padding = "0"
     document.body.style.margin = "0"
         let ctx = can.getContext("2d");
@@ -34,13 +32,12 @@ drawDirEdge = (node1, node2) => {
     ctx.fillStyle = "grey";
     ctx.fill();
 }
+
 drawUnDirEdge = (node1, node2) => {
     let can = document.getElementById("can");
     let bodyRect = document.body.getBoundingClientRect(), canRect = can.getBoundingClientRect()
     let yOffset = canRect.top-bodyRect.top
     let xOffset = canRect.left-bodyRect.left
-    
-    
     document.body.style.padding = "0"
     document.body.style.margin = "0"
     let Node1 = document.getElementById(`${node1}`)
