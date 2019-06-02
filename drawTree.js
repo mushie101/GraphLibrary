@@ -1,14 +1,15 @@
-makeTree = (value, counter) => {
+let counter = 0
+makeTree = () => {
     console.log(counter)
     let tree = document.getElementById(`${counter}`)
     tree.setAttribute("visibility", "visible")
-    return
+    counter ++
 }
 forms = () => {
-    let counter = 0
     let input = document.createElement("form")
     input.setAttribute("name","graphForm")
-    input.setAttribute("onsubmit",`makeTree(graphForm.input.value, ${counter++});return false`)
+    console.log(counter+1000)
+    input.setAttribute("onsubmit",`makeTree(${counter.value});return false`)
     let formText = document.createTextNode("Enter Node:")
     input.appendChild(formText)
     let userInput = document.createElement("input")
@@ -19,6 +20,7 @@ forms = () => {
     submitButton.setAttribute("type","submit")
     input.appendChild(submitButton)
     document.body.append(input)
+    counter.value++
 }
 drawTreeNodes = () => {
     let widthOfParent = screen.width  * 0.5
@@ -26,6 +28,7 @@ drawTreeNodes = () => {
     console.log(heightOfParent)
     heightOfLayer = heightOfParent / 5
     let container = document.createElement("div")
+    container.setAttribute("id","container")
     container.style.width = `${widthOfParent}px`
     container.style.height = `${heightOfParent}px`
     let arrayIndex = 0
