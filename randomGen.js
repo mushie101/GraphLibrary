@@ -1,5 +1,6 @@
 /* Takes as input number of vertices and gridSize.
-Intialises empty adjacency matrix of correct size (using adjMat function), and randomises coordinates of vertices.*/
+Intialises empty adjacency matrix of correct size (using adjMat function), and randomises coordinates of vertices.
+Also ensures no 3 vertices are on the same line (by checking slope) against every pair).*/
 randomGeneratorNode = (num, gridSizeX, gridSizeY) => {
 let coordX = new Array(num).fill(-1)
 let coordY = new Array(num).fill(-1)
@@ -11,14 +12,23 @@ for (var i = 0 ; i < num ; ){
     let chk=0
     for (var j = 0; j < i; j++){
         if (coordX[i]!=coordX[j] && coordY[i]!=coordY[j]){
-            chk++;
+            let chk2 = 0 
+            for (let k = 0; k < j; k++  ){
+            if (((coordX[i]-coordX[j])/(coordY[i]-coordY[j]))!=((coordX[i]-coordX[k])/(coordY[i]-coordY[k]))){    
+            chk2++;
+            }
+            }
+            if (chk2==j){
+            chk++
             }
         }
+    }
     if (chk==i){
         i++
         //drawNode(coordX[i], coordY[i])
         }
     }
+    return mat
 }
 
 
