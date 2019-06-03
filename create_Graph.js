@@ -1,5 +1,5 @@
 // This is a graph class
-// It creates an object of type Graph and accepts "number of vertices" as an argument
+// It creates an object of type Graph
 class Graph{
     constructor()
     {
