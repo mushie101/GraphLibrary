@@ -11,10 +11,7 @@ isDAG = (graphObject) => {
     }
     for (let i = 0; i < num; i++){
         if(detectCycle(i, graphObject, visited, rec_Stack))
-        {
-            console.log(i);
             return false;
-        }
     return true;
     }
 }
